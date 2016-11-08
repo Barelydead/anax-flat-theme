@@ -123,6 +123,11 @@ update:
 	git pull
 	git pull --recurse-submodules && git submodule foreach git pull origin master
 
+# target: upgrade                 - Upgrade external LESS modules.
+.PHONY: upgrade
+upgrade: upgrade-normalize upgrade-responsive-menu
+	@$(call HELPTEXT,$@)
+
 
 # target: upgrade-normalize       - Upgrade LESS module - Normalize.
 .PHONY: upgrade-normalize
