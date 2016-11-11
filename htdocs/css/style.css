@@ -19,6 +19,7 @@
  */
 /* Document
    ========================================================================== */
+@import url('https://fonts.googleapis.com/css?family=Ravi+Prakash');
 html {
   font-family: sans-serif;
   /* 1 */
@@ -478,7 +479,7 @@ template {
 .breadcrumb li::after {
   content: " » ";
 }
-.site-header {
+.footer {
   position: relative;
 }
 /**
@@ -571,7 +572,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
  * Menu layout for the desktop variant, usually full width of browser.
  */
 .rm-desktop ul {
-  background-color: grey;
+  background-color: #25666C;
 }
 .rm-desktop li {
   position: relative;
@@ -582,7 +583,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-desktop li a {
   color: inherit;
-  background-color: grey;
+  background-color: #25666C;
 }
 .rm-desktop li a:hover {
   color: inherit;
@@ -709,12 +710,39 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   right: 0;
 }
 /** --------------------------------------------------------------
+ *  Color palette and general rules
+ */
+html {
+  background-color: #679A9E;
+}
+img {
+  max-width: 100%;
+}
+/** --------------------------------------------------------------
  *  Header
  */
+.site-header {
+  padding-top: 20px;
+  height: 50px;
+  padding: 0 1em;
+  background-color: #427F85;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+}
+.wrap-all {
+  padding: 10px 2em;
+  background-color: #eee;
+  margin-top: 60px;
+}
 .site-logo-text,
 .profile {
   float: left;
-  width: 25%;
+  width: 30%;
 }
 .navbar2 {
   width: 45%;
@@ -722,30 +750,73 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .site-logo-text {
   font-size: 2em;
+  font-family: 'Ravi Prakash', cursive;
 }
 .site-logo-text a {
   text-decoration: none;
   color: #000;
 }
-.site-header {
-  padding-top: 20px;
-  height: 60px;
-}
 /** --------------------------------------------------------------
  *  Logo images
  */
 .logo-1 {
-  position: absolute;
-  top: 70px;
-  left: -140px;
+  position: relative;
+  top: 300px;
+  left: -175px;
 }
-.site-logo-text-icon img {
+.site-logo-text img {
   vertical-align: bottom;
+  width: 48px;
+}
+/** --------------------------------------------------------------
+ *  Article
+ */
+.article {
+  font-family: sans-serif;
+}
+.article h1 {
+  font-size: 3em;
+  margin: 0;
+  color: #D09663;
+}
+.article h3 {
+  font-size: 1.5em;
+  font-weight: lighter;
+  margin: 0 0 40px 0;
+  font-family: serif;
+  color: #D09663;
+}
+.outer-wrap-main {
+  min-height: 30em;
+}
+/** --------------------------------------------------------------
+ *  byline
+ */
+.after-main {
+  overflow: auto;
+  padding: 5px;
+  border: 1px #25666C solid;
+}
+/** --------------------------------------------------------------
+ *  footer
+ */
+.footer {
+  background-color: #eee;
+}
+.footer .footer-column {
+  background-color: #eee;
+}
+.footer .footer-column ul {
+  list-style: disc;
+  color: #D09663;
+}
+.footer .footer-column h4 {
+  color: #D09663;
 }
 /** --------------------------------------------------------------
  *  Responsive
  */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 980px) {
   .site-logo-text {
     width: 30%;
   }
@@ -756,7 +827,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
     max-width: 100%;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .site-logo-text {
     width: 90%;
   }

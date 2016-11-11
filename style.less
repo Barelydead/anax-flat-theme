@@ -3,25 +3,67 @@
 */
 @import url(modules.less);
 
+/** --------------------------------------------------------------
+ *  Color palette and general rules
+ */
+@baseblue: #427F85;
+@blueH1: #679A9E;
+@blueS1: #25666C;
+@compliment: #D09663;
+
+@import url('https://fonts.googleapis.com/css?family=Ravi+Prakash');
+
+
+html {
+    background-color: @blueH1;
+}
+
+ img {
+     max-width: 100%;
+ }
+
+
 
 /** --------------------------------------------------------------
  *  Header
  */
+
+
+ .site-header {
+     padding-top: 20px;
+     height: 50px;
+     padding: 0 1em;
+     background-color: @baseblue;
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.75);
+     -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.75);
+     box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.75);
+ }
+
+ .wrap-all {
+     padding: 10px 2em;
+     background-color: #eee;
+     margin-top: 60px;
+ }
+
 .site-logo-text,
 .profile,
 {
     float: left;
-    width: 25%;
+    width: 30%;
 }
 
-.navbar2,
-{
+.navbar2 {
     width: 45%;
     float: left;
 }
 
 .site-logo-text {
     font-size: 2em;
+    font-family: 'Ravi Prakash', cursive;
 
     a {
         text-decoration: none;
@@ -29,26 +71,85 @@
     }
 }
 
-@navbarItemBgColor: grey;
-
+@navbarItemBgColor: @blueS1;
 @maxButtonFontSize: 2em;
 
-.site-header {
-    padding-top: 20px;
-    height: 60px;
-}
+
+
+
 /** --------------------------------------------------------------
  *  Logo images
  */
 .logo-1 {
-    position: absolute;
-    top: 70px;
-    left: -140px;
+    position: relative;
+    top: 300px;
+    left: -175px;
 }
 
-.site-logo-text-icon {
+.site-logo-text {
     img {
         vertical-align: bottom;
+        width: 48px;
+    }
+}
+
+/** --------------------------------------------------------------
+ *  Article
+ */
+
+ .article {
+     font-family: sans-serif;
+
+     h1 {
+         font-size: 3em;
+         margin: 0;
+         color: @compliment;
+     }
+
+     h3 {
+         font-size: 1.5em;
+         font-weight: lighter;
+         margin: 0 0 40px 0;
+         font-family: serif;
+         color: @compliment;
+     }
+
+ }
+
+.outer-wrap-main {
+     min-height: 30em;
+}
+/** --------------------------------------------------------------
+ *  byline
+ */
+.after-main {
+    overflow: auto;
+    padding: 5px;
+    border: 1px @blueS1 solid;
+}
+
+
+
+
+/** --------------------------------------------------------------
+ *  footer
+ */
+
+.footer {
+    background-color: #eee;
+
+    .footer-column {
+        background-color: #eee;
+
+        ul {
+            list-style: disc;
+            color: @compliment;
+
+        }
+
+        h4 {
+            color: @compliment;
+        }
     }
 }
 
@@ -56,7 +157,7 @@
  *  Responsive
  */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 980px) {
     .site-logo-text {
         width: 30%;
     }
@@ -72,7 +173,7 @@
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .site-logo-text {
         width: 90%;
     }
