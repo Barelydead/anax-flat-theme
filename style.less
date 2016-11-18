@@ -14,14 +14,11 @@
 @import url('https://fonts.googleapis.com/css?family=Ravi+Prakash');
 
 
-html {
-    background-color: @blueH1;
+
+
+img {
+    max-width: 100%;
 }
-
- img {
-     max-width: 100%;
- }
-
 
 
 /** --------------------------------------------------------------
@@ -44,22 +41,26 @@ html {
  }
 
  .wrap-all {
-     padding: 10px 2em;
-     background-color: #eee;
-     margin-top: 60px;
+     margin-top: 50px;
  }
 
+.navbar2,
 .site-logo-text,
 .profile,
 {
-    float: left;
-    width: 30%;
+    .column(4);
 }
 
-.navbar2 {
-    width: 45%;
-    float: left;
+.inner-wrap-flash {
+    max-width: none;
+    overflow: hidden;
+
+    img {
+        width: 100%
+    }
 }
+
+
 
 .site-logo-text {
     font-size: 2em;
@@ -72,7 +73,9 @@ html {
 }
 
 @navbarItemBgColor: @blueS1;
+@navbarItemHoverBgColor: @blueH1;
 @maxButtonFontSize: 2em;
+@navbarItemSelectedBgColor: @compliment;
 
 
 
@@ -98,19 +101,15 @@ html {
  */
 
  .article {
-     font-family: sans-serif;
 
      h1 {
-         font-size: 3em;
-         margin: 0;
+         font-size: @magicNumber * 2;
          color: @compliment;
      }
 
      h3 {
-         font-size: 1.5em;
+         font-size: @magicNumber;
          font-weight: lighter;
-         margin: 0 0 40px 0;
-         font-family: serif;
          color: @compliment;
      }
 
@@ -119,16 +118,20 @@ html {
 .outer-wrap-main {
      min-height: 30em;
 }
+
 /** --------------------------------------------------------------
  *  byline
  */
 .after-main {
     overflow: auto;
-    padding: 5px;
-    border: 1px @blueS1 solid;
+    .column(10);
 }
 
-
+.after-main {
+    a, p {
+        margin-top: 0;
+    }
+}
 
 
 /** --------------------------------------------------------------
@@ -136,7 +139,7 @@ html {
  */
 
 .footer {
-    background-color: #eee;
+
 
     .footer-column {
         background-color: #eee;
@@ -157,25 +160,44 @@ html {
  *  Responsive
  */
 
+ @media screen and (max-width: 1220px) {
+     .site-logo-text,
+     .profile,
+     {
+         .column(4);
+     }
+     .navbar2 {
+         .column(8);
+     }
+ }
+
+
+
 @media screen and (max-width: 980px) {
     .site-logo-text {
-        width: 30%;
+        .column(4);
     }
 
     .navbar2 {
-        width: 70%;
+        .column(8);
     }
 
     img {
         max-width: 100%;
     }
 
+    .outer-wrap-main,
+    .outer-wrap-footer,
+    .after-main {
+        margin-left: 1em;
+    }
+
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
     .site-logo-text {
-        width: 90%;
+        .column(10);
     }
 
     .navbar2 {
@@ -185,12 +207,13 @@ html {
     .sidebar {
         display: none;
     }
-    .footer-column {
-        float: none;
-        display: block;
+    .footer .column {
         text-align: center;
-        margin: auto;
-        width: 90%;
+        .column(12);
+
+        .block {
+            .column(12);
+        }
     }
 
 }
