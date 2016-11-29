@@ -1,0 +1,183 @@
+/**
+* Anax Flat theme.
+*/
+@import url(modules.less);
+@import url('https://fonts.googleapis.com/css?family=Ravi+Prakash');
+
+
+
+
+img {
+    max-width: 100%;
+}
+/**
+* Header.
+*/
+
+.site-logo-text {
+    font-size: 2em;
+    font-family: 'Ravi Prakash', cursive;
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+
+.site-logo-text,
+.profile
+{
+    .column(3);
+}
+
+.navbar2 {
+    .column(9);
+}
+
+
+// @navbarItemBgColor: ;
+@navbarItemBgColor: #51B58B;
+@navbarItemHoverBgColor: #eee;
+@navbarItemSelectedBgColor: #aaa;
+
+
+.breadcrumb-wrap {
+    overflow: auto;
+}
+
+.site-logo-text {
+    img {
+        vertical-align: bottom;
+        width: 46px;
+    }
+}
+
+
+
+/**
+* general.
+*/
+
+@colorH1BorderBottom: #51B58B;
+@colorH2BorderBottom: #51B58B;
+
+
+.outer-wrap-header, .wrap-all .inner-wrap-header {
+    background-color: #CCCCCC;
+}
+
+.outer-wrap-footer, .wrap-all .inner-wrap-footer {
+    background-color: #CCCCCC;
+}
+
+.outer-wrap-footer {
+    border-top: #51B58B solid 5px;
+}
+
+.outer-wrap-header {
+    border-bottom: #51B58B solid 5px;
+}
+
+
+a:link {
+    color: #51B58B;
+}
+
+/* visited link */
+a:visited {
+    color: #356550;
+}
+
+/* mouse over link */
+a:hover {
+    color: #000;
+}
+
+/* selected link */
+a:active {
+    color: #000;
+}
+
+
+.inner-wrap-flash,
+.inner-wrap-main,
+.inner-wrap-breadcrumb,
+.inner-wrap-after-main {
+    .row {
+    background-color: #fff;
+    border-left: #51B58B solid 5px;
+    border-right: #51B58B solid 5px;
+    }
+    .after-main {
+        margin-bottom: @magicNumber;
+    }
+
+}
+
+.wrap-all {
+    background-color: #eee;
+}
+
+
+.after-main {
+    .column(12);
+}
+
+
+/** --------------------------------------------------------------
+ *  Responsive
+ */
+
+ @media screen and (max-width: 1220px) {
+     .site-logo-text,
+     .profile,
+     {
+         .column(4);
+     }
+     .navbar2 {
+         .column(8);
+     }
+ }
+
+
+
+@media screen and (max-width: 980px) {
+    .site-logo-text {
+        .column(4);
+    }
+
+    .navbar2 {
+        .column(8);
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+
+}
+
+
+@media screen and (max-width: 760px) {
+    .site-logo-text {
+        .column(10);
+    }
+
+    .navbar2 {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+    .footer .column {
+        text-align: center;
+        .column(12);
+
+        .block {
+            .column(12);
+        }
+    }
+
+}

@@ -1,0 +1,163 @@
+/**
+* Anax Flat theme.
+*/
+@import url(modules.less);
+@import url('https://fonts.googleapis.com/css?family=Ravi+Prakash');
+@import url('https://fonts.googleapis.com/css?family=Changa+One|Shadows+Into+Light+Two|Slabo+27px');
+
+
+@fontFamilyHeadings:  'Changa One', cursive;
+@fontFamilyBody:      font-family: 'Cinzel', serif;
+@fontFamilyCode:      @fontFamilyCourier;
+
+
+img {
+    max-width: 100%;
+}
+/**
+* Header.
+*/
+
+.site-logo-text {
+    font-size: 2em;
+    font-family: 'Ravi Prakash', cursive;
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+
+.site-logo-text,
+.profile
+{
+    .column(3);
+}
+
+.navbar2 {
+    .column(9);
+}
+
+
+// @navbarItemBgColor: ;
+@navbarItemHoverBgColor: #eee;
+@navbarItemSelectedBgColor: #aaa;
+
+
+.breadcrumb-wrap {
+    overflow: auto;
+}
+
+.site-logo-text {
+    img {
+        vertical-align: bottom;
+        width: 46px;
+    }
+}
+
+
+
+/**
+* general.
+*/
+
+h1, h2, h3, h4, h5, h6 {
+    .font(100%, @fontFamilyHeadings);
+}
+
+p, li {
+    .font(100%, 'Slabo 27px');
+}
+
+a {
+    .font(100%, 'Shadows Into Light Two');
+}
+
+.outer-wrap-header, .wrap-all .inner-wrap-header {
+    background-color: #ccc;
+}
+
+.outer-wrap-footer, .wrap-all .inner-wrap-footer {
+    background-color: #ccc;
+}
+
+
+.inner-wrap-main,
+.inner-wrap-breadcrumb,
+.inner-wrap-after-main {
+    .row {
+    background-color: #fff;
+    }
+    .after-main {
+        margin-bottom: @magicNumber;
+    }
+
+}
+
+.wrap-all {
+    background-color: #eee;
+}
+
+
+.after-main {
+    .column(12);
+}
+
+
+/** --------------------------------------------------------------
+ *  Responsive
+ */
+
+ @media screen and (max-width: 1220px) {
+     .site-logo-text,
+     .profile,
+     {
+         .column(4);
+     }
+     .navbar2 {
+         .column(8);
+     }
+ }
+
+
+
+@media screen and (max-width: 980px) {
+    .site-logo-text {
+        .column(4);
+    }
+
+    .navbar2 {
+        .column(8);
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+
+}
+
+
+@media screen and (max-width: 760px) {
+    .site-logo-text {
+        .column(10);
+    }
+
+    .navbar2 {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+    .footer .column {
+        text-align: center;
+        .column(12);
+
+        .block {
+            .column(12);
+        }
+    }
+
+}

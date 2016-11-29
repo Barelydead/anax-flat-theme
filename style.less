@@ -52,14 +52,11 @@ img {
 }
 
 .inner-wrap-flash {
-    max-width: none;
-    overflow: hidden;
 
     img {
-        width: 100%
+        margin-bottom: @magicNumber * 1.5;
     }
 }
-
 
 
 .site-logo-text {
@@ -115,9 +112,11 @@ img {
 
  }
 
-.outer-wrap-main {
-     min-height: 30em;
+
+.route-grid .inner-wrap .row {
+    .showGrid();
 }
+
 
 /** --------------------------------------------------------------
  *  byline
@@ -141,8 +140,8 @@ img {
 .footer {
 
 
+
     .footer-column {
-        background-color: #eee;
 
         ul {
             list-style: disc;
