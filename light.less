@@ -9,30 +9,7 @@
 img {
     max-width: 100%;
 }
-/**
-* Header.
-*/
 
-.site-logo-text {
-    font-size: 2em;
-    font-family: 'Ravi Prakash', cursive;
-
-    a {
-        text-decoration: none;
-        color: #000;
-    }
-}
-
-
-.site-logo-text,
-.profile
-{
-    .column(3);
-}
-
-.navbar2 {
-    .column(9);
-}
 
 
 // @navbarItemBgColor: ;
@@ -92,45 +69,16 @@ img {
  *  Responsive
  */
 
- @media screen and (max-width: 1220px) {
-     .site-logo-text,
-     .profile,
-     {
-         .column(4);
-     }
-     .navbar2 {
-         .column(8);
-     }
- }
-
-
 
 @media screen and (max-width: 980px) {
-    .site-logo-text {
-        .column(4);
-    }
-
-    .navbar2 {
-        .column(8);
-    }
-
     img {
         max-width: 100%;
     }
-
-
 }
 
 
+
 @media screen and (max-width: 760px) {
-    .site-logo-text {
-        .column(10);
-    }
-
-    .navbar2 {
-        display: none;
-    }
-
     .sidebar {
         display: none;
     }

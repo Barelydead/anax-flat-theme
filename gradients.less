@@ -1,0 +1,178 @@
+/**
+* Anax Flat theme.
+*/
+@import url(modules.less);
+@import url('https://fonts.googleapis.com/css?family=Ravi+Prakash');
+
+@bordercolor: #299A0B;
+
+
+
+img {
+    max-width: 100%;
+}
+/**
+* Header.
+*/
+
+
+
+
+// @navbarItemBgColor: ;
+@navbarItemBgColor: @bordercolor;
+@navbarItemHoverBgColor: #eee;
+@navbarItemSelectedBgColor: #aaa;
+
+
+.breadcrumb-wrap {
+    overflow: auto;
+}
+
+.site-logo-text {
+    img {
+        vertical-align: bottom;
+        width: 46px;
+    }
+}
+
+
+
+
+
+/**
+* general.
+*/
+
+@colorH1BorderBottom: @bordercolor;
+@colorH2BorderBottom: @bordercolor;
+
+.rm-desktop li a {
+    background: #bfd255;
+    background: -moz-linear-gradient(top, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%);
+    background: -webkit-linear-gradient(top, #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%);
+    background: linear-gradient(to bottom, #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d',GradientType=0 );
+}
+
+.inner-wrap-footer {
+    max-width: 100%;
+}
+
+
+
+.outer-wrap-footer {
+    border-top: @bordercolor solid 5px;
+}
+
+.outer-wrap-flash,
+.outer-wrap-breadcrumb,
+.outer-wrap-header {
+    background: #9dd53a;
+}
+
+.outer-wrap-header {
+    border-bottom: @bordercolor 5px solid;
+}
+
+.outer-wrap-main {
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #9ed541 0%, #ffffff 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%,#9ed541 0%,#ffffff 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#9ed541 0%,#ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+
+.outer-wrap-footer {
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #9ed541 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%,#9ed541 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#9ed541 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#9ed541',GradientType=0 );
+}
+
+
+
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: grey;
+}
+
+/* mouse over link */
+a:hover {
+    color: #000;
+}
+
+/* selected link */
+a:active {
+    color: #000;
+}
+
+
+.inner-wrap-flash,
+.inner-wrap-main,
+.inner-wrap-breadcrumb,
+.inner-wrap-footer,
+.inner-wrap-after-main {
+    .row {
+    border-left: @bordercolor solid 5px;
+    border-right: @bordercolor solid 5px;
+    margin-left: -15px;
+    }
+    .after-main {
+        margin-bottom: @magicNumber;
+    }
+
+}
+
+
+.site-footer {
+    border-top: @bordercolor solid 5px;
+}
+
+.wrap-all {
+    background-color: white;
+}
+
+.inner-wrap-main,
+.inner-wrap-breadcrumb,
+.inner-wrap-footer {
+    background: #9ED541;
+}
+
+
+.after-main {
+    .column(12);
+}
+
+
+/** --------------------------------------------------------------
+ *  Responsive
+ */
+
+
+@media screen and (max-width: 980px) {
+    img {
+        max-width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width: 760px) {
+    .sidebar {
+        display: none;
+    }
+    .footer .column {
+        text-align: center;
+        .column(12);
+
+        .block {
+            .column(12);
+        }
+    }
+
+}

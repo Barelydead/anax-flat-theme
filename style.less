@@ -25,68 +25,45 @@ img {
  *  Header
  */
 
- .site-header {
-     padding-top: 20px;
-     height: 50px;
-     padding: 0 1em;
-     background-color: @baseblue;
-     position: fixed;
-     top: 0;
-     left: 0;
-     right: 0;
-     -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.75);
-     -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.75);
-     box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.75);
- }
+.outer-wrap-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: @baseblue;
+    padding-bottom: 5px;
+}
 
+.site-logo-text {
+    padding: 5px 0;
+}
 
 .wrap-all {
-    margin-top: 60px;
-}
- // .inner-wrap {
- //     &.inner-wrap-header {
- //         max-width: 100%;
- //         background-color: @baseblue;
- //         height: 50px;
- //         position: fixed;
- //         top: 0;
- //         left: 0;
- //         right: 0;
- //     }
- // }
-
-
-.profile {
-    display: none;
+    margin-top: 100px;
 }
 
-.site-logo-text
-{
-    .column(2);
+.inner-wrap-header {
+    .row {
+        background-color: @baseblue;
+    }
 }
 
-.navbar2 {
-    .column(7);
-    .push(1);
-}
+ .outer-wrap-main,
+ .inner-wrap-breadcrumb,
+ .inner-wrap-flash {
+     .row {
+         background-color: #eee;
+     }
+ }
+
 
 .inner-wrap-flash {
 
     img {
-        margin-bottom: @magicNumber * 1.5;
+        margin-bottom: @magicNumber * 0.5;
     }
 }
 
-
-.site-logo-text {
-    font-size: 2em;
-    font-family: 'Ravi Prakash', cursive;
-
-    a {
-        text-decoration: none;
-        color: #000;
-    }
-}
 
 @navbarItemBgColor: @blueS1;
 @navbarItemHoverBgColor: @blueH1;
@@ -178,52 +155,16 @@ img {
  *  Responsive
  */
 
- @media screen and (max-width: 1265px) {
-     .site-logo-text,
-     {
-         .column(3);
-     }
-     .navbar2 {
-         .column(9);
-     }
- }
-
-
 
 @media screen and (max-width: 980px) {
-    .profile {
-        display: block;
-    }
-
-    .navbar2 {
-        display: none;
-    }
-
-    .site-logo-text {
-        .column(10);
-    }
     img {
         max-width: 100%;
     }
-
-    .outer-wrap-main,
-    .outer-wrap-footer,
-    .after-main {
-        margin-left: 1em;
-    }
-
 }
 
 
-@media screen and (max-width: 720px) {
-    .site-logo-text {
-        .column(10);
-    }
 
-    .navbar2 {
-        display: none;
-    }
-
+@media screen and (max-width: 760px) {
     .sidebar {
         display: none;
     }

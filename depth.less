@@ -3,6 +3,7 @@
 */
 @import url(modules.less);
 @import url('https://fonts.googleapis.com/css?family=Ravi+Prakash');
+@import url('https://fonts.googleapis.com/css?family=Changa+One|Shadows+Into+Light+Two|Slabo+27px');
 
 @baseblue: #42726D;
 @blueh1: #B0DED9;
@@ -47,6 +48,7 @@ img {
     background-color: @basered;
     .row {
         background-color: @redh1;
+        padding-bottom: 1em;
     }
 }
 
@@ -66,7 +68,7 @@ img {
 }
 
 .outer-wrap-flash {
-    background-color: @baseblue;
+
 }
 
 .outer-wrap-footer, .wrap-all .inner-wrap-footer {
@@ -98,6 +100,70 @@ img {
     .column(12);
 }
 
+//Depth effekts
+
+.rm-desktop .selected a,
+.rm-desktop li a:hover {
+    -webkit-box-shadow: 7px 7px 11px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 7px 11px -3px rgba(0,0,0,0.75);
+    box-shadow: 7px 7px 11px -3px rgba(0,0,0,0.75);
+}
+
+.outer-wrap-header {
+    -webkit-box-shadow: 0px 8px 9px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 8px 9px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 8px 9px -3px rgba(0,0,0,0.75);
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.outer-wrap-footer,
+.outer-wrap-breadcrumb {
+    -webkit-box-shadow: 0px -8px 9px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -8px 9px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px -8px 9px -3px rgba(0,0,0,0.75);
+    position: relative;
+    z-index: 2;
+}
+
+.outer-wrap-main {
+    position: relative;
+    z-index: 2;
+}
+
+.outer-wrap-flash {
+    margin: 100px 0 -10px 0;
+}
+
+.route-theme-selector .outer-wrap-main {
+    margin-top: 100px;
+}
+
+.outer-wrap-main {
+    -webkit-box-shadow: 0px 8px 9px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 8px 9px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 8px 9px -3px rgba(0,0,0,0.75);
+}
+
+
+h1 {
+    background-color: #42726D;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+}
+
+@fontFamilyHeadings:  'Changa One', cursive;
+@fontSizeH1: 3em;
+
+img {
+    box-shadow: 7px 7px 11px -3px rgba(0,0,0,.75);
+}
 
 /** --------------------------------------------------------------
  *  Responsive

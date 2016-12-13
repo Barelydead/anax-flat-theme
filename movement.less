@@ -1,0 +1,179 @@
+/**
+* Anax Flat theme.
+*/
+@import url(modules.less);
+@import url('https://fonts.googleapis.com/css?family=Ravi+Prakash');
+
+
+
+img {
+    max-width: 100%;
+}
+
+
+
+// @navbarItemBgColor: ;
+@navbarItemHoverBgColor: #eee;
+@navbarItemSelectedBgColor: #aaa;
+
+
+.breadcrumb-wrap {
+    overflow: auto;
+}
+
+.site-logo-text {
+    img {
+        vertical-align: bottom;
+        width: 46px;
+    }
+}
+
+
+
+/**
+* general.
+*/
+
+.outer-wrap-header, .wrap-all .inner-wrap-header {
+    background-color: #ccc;
+}
+
+.outer-wrap-footer, .wrap-all .inner-wrap-footer {
+    background-color: #ccc;
+}
+
+
+.inner-wrap-main,
+.inner-wrap-breadcrumb,
+.inner-wrap-after-main {
+    .row {
+    background-color: #fff;
+    }
+    .after-main {
+        margin-bottom: @magicNumber;
+    }
+
+}
+
+.wrap-all {
+    background-color: #eee;
+}
+
+
+.after-main {
+    .column(12);
+}
+
+
+// .main {
+//     .column(12);
+//     .push(0);
+//     article {
+//         -webkit-column-count: 2; /* Chrome, Safari, Opera */
+//         -moz-column-count: 2; /* Firefox */
+//         column-count: 2;
+//     }
+// }
+
+.site-logo-text {
+    position: relative;
+    left: 0px;
+    animation-name: slideIn;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+/* Safari 4.0 - 8.0 */
+@keyframes slideIn {
+    0% {left: 0px}
+    50% {left: 800px}
+    100% {left: 0px}
+}
+
+.rm-desktop li a:hover {
+    animation-name: shimmy;
+    animation-duration: 0.2s;
+    animation-iteration-count: 2;
+}
+
+@keyframes shimmy {
+    0% {transform: rotateZ(0deg)}
+    33% {transform: rotateZ(10deg)}
+    66% {transform: rotateZ(-10deg)}
+    100% {transform: rotateZ(0deg)}
+}
+
+.main article {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.main article h1, h2, h3, h4 {
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes slide {
+    from {margin-left: 100%}
+    to {margin-left: 0}
+}
+
+
+h1 {
+    animation-name: colorFade;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+@keyframes colorFade {
+    0% {border: 4px solid blue}
+    25% {border: 4px dashed red}
+    50% {border: 4px solid orange}
+    75% {border: 4px dashed green}
+    100% {border: 4px solid black}
+}
+
+img:hover {
+    transform: scale(1.1,1.1)
+}
+
+img {
+    transition: transform 0.4s;
+    transition-timing-function: ease-in;
+}
+
+
+/** --------------------------------------------------------------
+ *  Responsive
+ */
+
+
+@media screen and (max-width: 980px) {
+    img {
+        max-width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width: 760px) {
+    .sidebar {
+        display: none;
+    }
+    .footer .column {
+        text-align: center;
+        .column(12);
+
+        .block {
+            .column(12);
+        }
+    }
+
+}

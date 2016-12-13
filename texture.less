@@ -4,15 +4,6 @@
 @import url(modules.less);
 @import url('https://fonts.googleapis.com/css?family=Ravi+Prakash');
 
-@baseblue: #42726D;
-@blueh1: #B0DED9;
-@blues2: #2A7B72;
-@baseyellow: #B89A6B;
-@yellowh1: #FFEBCB;
-@yellows1: #AC8340;
-@basered: #B8706B;
-@redh1: #F1A8A2;
-@reds1: #C64D44;
 
 
 img {
@@ -20,10 +11,16 @@ img {
 }
 
 
+body {
+    background-image: url("../img/background/random_grey_variations.png");
+    background-repeat: repeat;
+}
+
+
 
 // @navbarItemBgColor: ;
 @navbarItemHoverBgColor: #eee;
-@navbarItemSelectedBgColor: @reds1;
+@navbarItemSelectedBgColor: #aaa;
 
 
 .breadcrumb-wrap {
@@ -43,54 +40,27 @@ img {
 * general.
 */
 
-.outer-wrap-header, .wrap-all .inner-wrap-header {
-    background-color: @basered;
-    .row {
-        background-color: @redh1;
-    }
+
+.inner-wrap {
+    margin-top: 10px;
 }
 
-
-.outer-wrap-main, .wrap-all .inner-wrap-main {
-    background-color: @baseblue;
-    .row {
-        background-color: @blueh1;
-    }
-}
-
-.outer-wrap-breadcrumb, .wrap-all .inner-wrap-breadcrumb {
-    background-color: @baseblue;
-    .row {
-        background-color: @blueh1;
-    }
-}
-
-.outer-wrap-flash {
-    background-color: @baseblue;
-}
-
-.outer-wrap-footer, .wrap-all .inner-wrap-footer {
-    background-color: @baseyellow;
-    .row {
-        background-color: @yellowh1;
-    }
+.inner-wrap-header .row {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 
 .inner-wrap-main,
 .inner-wrap-breadcrumb,
-.inner-wrap-after-main {
+.inner-wrap-after-main,
+.inner-wrap-footer {
     .row {
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.2);
     }
     .after-main {
         margin-bottom: @magicNumber;
     }
 
-}
-
-.wrap-all {
-    background-color: #eee;
 }
 
 
